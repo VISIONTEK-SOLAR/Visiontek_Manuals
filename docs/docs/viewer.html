@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PDF Viewer</title>
+<style>
+    body {
+        margin: 0;
+        background: #000;
+    }
+    iframe {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+    }
+</style>
+</head>
+<body>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const file = urlParams.get("file");
+
+    const pdfURL = "https://cdn.jsdelivr.net/gh/VISIONTEK-SOLAR/Visiontek_Manuals@main/" + file;
+
+    document.write(`
+        <iframe src="${pdfURL}" allowfullscreen></iframe>
+    `);
+</script>
+
+</body>
+</html>
