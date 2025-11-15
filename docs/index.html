@@ -1,47 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VISIONTEK – User Manuals</title>
+
     <style>
         body {
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
-            margin: 40px;
+            background: #f7f7f7;
         }
-        h1 {
-            color: #1a73e8;
-        }
-        h2 {
-            margin-top: 30px;
-        }
-        ul {
-            list-style: square;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
+
+        /* Header */
+        .header {
+            background: #ff6600; /* VISIONTEK Orange */
+            color: white;
+            padding: 20px 40px;
+            font-size: 28px;
             font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .category-title {
+            font-size: 26px;
+            margin-top: 40px;
+            color: #ff6600;
+            border-left: 6px solid #ff6600;
+            padding-left: 12px;
+        }
+
+        /* Manual Card */
+        .manual-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .manual-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .download-btn {
+            background: #ff6600;
+            color: white;
+            padding: 10px 22px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .download-btn:hover {
+            background: #e25500;
         }
     </style>
 </head>
+
 <body>
-    <h1>VISIONTEK – User Manuals</h1>
-    <p>Select a category to download the manual:</p>
 
-    <h2>On-grid Inverters</h2>
-    <ul>
-        <li><a href="../manuals/ongrid/" target="_blank">View On-grid Manuals</a></li>
-    </ul>
+    <div class="header">VISIONTEK – User Manuals</div>
 
-    <h2>Batteries</h2>
-    <ul>
-        <li><a href="../manuals/batteries/" target="_blank">View Battery Manuals</a></li>
-    </ul>
+    <div class="container">
 
-    <h2>Dongles</h2>
-    <ul>
-        <li><a href="../manuals/Dongles/" target="_blank">View Dongle Manuals</a></li>
-    </ul>
+        <!-- On-grid Inverters -->
+        <div class="category-title">On-grid Inverters</div>
+
+        <div class="manual-card">
+            <div class="manual-name">Single Phase Inverter – User Manual</div>
+            <a class="download-btn" href="../manuals/ongrid/1Ph-Inverter-Usermanual.pdf" target="_blank">Download</a>
+        </div>
+
+        <div class="manual-card">
+            <div class="manual-name">Three Phase Inverter – User Manual</div>
+            <a class="download-btn" href="../manuals/ongrid/3Ph-Inverter-Usermanual.pdf" target="_blank">Download</a>
+        </div>
+
+
+        <!-- Batteries -->
+        <div class="category-title">Batteries</div>
+
+        <div class="manual-card">
+            <div class="manual-name">Battery Manual – 12V 100Ah</div>
+            <a class="download-btn" href="../manuals/batteries/Battery Manual_12V100AH.pdf" target="_blank">Download</a>
+        </div>
+
+
+        <!-- Dongles -->
+        <div class="category-title">Dongles</div>
+
+        <div class="manual-card">
+            <div class="manual-name">Wi-Fi Dongle – User Manual</div>
+            <a class="download-btn" href="../manuals/Dongles/Wi-Fi Dongle Usermanual.pdf" target="_blank">Download</a>
+        </div>
+
+        <div class="manual-card">
+            <div class="manual-name">GSM Dongle – User Manual</div>
+            <a class="download-btn" href="../manuals/Dongles/GSM Dongle Usermanual.pdf" target="_blank">Download</a>
+        </div>
+
+    </div>
 
 </body>
 </html>
-
