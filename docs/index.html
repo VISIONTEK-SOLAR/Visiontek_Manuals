@@ -13,15 +13,24 @@
             background: #f7f7f7;
         }
 
-        /* Header */
+        /* Header with logo */
         .header {
-            background: #ff6600; /* VISIONTEK Orange */
-            color: white;
-            padding: 20px 40px;
+            background: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        }
+
+        .header img {
+            height: 60px;
+        }
+
+        .title-text {
+            color: #ff6600;
             font-size: 28px;
             font-weight: bold;
-            letter-spacing: 1px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+            margin-left: 20px;
         }
 
         .container {
@@ -38,10 +47,9 @@
             padding-left: 12px;
         }
 
-        /* Manual Card */
         .manual-card {
             background: white;
-            padding: 20px;
+            padding: 22px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.15);
             margin: 20px 0;
@@ -58,65 +66,3 @@
 
         .download-btn {
             background: #ff6600;
-            color: white;
-            padding: 10px 22px;
-            border: none;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            transition: 0.2s;
-        }
-
-        .download-btn:hover {
-            background: #e25500;
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="header">VISIONTEK – User Manuals</div>
-
-    <div class="container">
-
-        <!-- On-grid Inverters -->
-        <div class="category-title">On-grid Inverters</div>
-
-        <div class="manual-card">
-            <div class="manual-name">Single Phase Inverter – User Manual</div>
-            <a class="download-btn" href="../manuals/ongrid/1Ph-Inverter-Usermanual.pdf" target="_blank">Download</a>
-        </div>
-
-        <div class="manual-card">
-            <div class="manual-name">Three Phase Inverter – User Manual</div>
-            <a class="download-btn" href="../manuals/ongrid/3Ph-Inverter-Usermanual.pdf" target="_blank">Download</a>
-        </div>
-
-
-        <!-- Batteries -->
-        <div class="category-title">Batteries</div>
-
-        <div class="manual-card">
-            <div class="manual-name">Battery Manual – 12V 100Ah</div>
-            <a class="download-btn" href="../manuals/batteries/Battery Manual_12V100AH.pdf" target="_blank">Download</a>
-        </div>
-
-
-        <!-- Dongles -->
-        <div class="category-title">Dongles</div>
-
-        <div class="manual-card">
-            <div class="manual-name">Wi-Fi Dongle – User Manual</div>
-            <a class="download-btn" href="../manuals/Dongles/Wi-Fi Dongle Usermanual.pdf" target="_blank">Download</a>
-        </div>
-
-        <div class="manual-card">
-            <div class="manual-name">GSM Dongle – User Manual</div>
-            <a class="download-btn" href="../manuals/Dongles/GSM Dongle Usermanual.pdf" target="_blank">Download</a>
-        </div>
-
-    </div>
-
-</body>
-</html>
