@@ -22,8 +22,10 @@
 
     const pdfURL = "https://cdn.jsdelivr.net/gh/VISIONTEK-SOLAR/Visiontek_Manuals@main/" + file;
 
+    const googleViewer = "https://docs.google.com/viewer?url=" + encodeURIComponent(pdfURL) + "&embedded=true";
+
     document.write(`
-        <iframe src="${pdfURL}" allowfullscreen></iframe>
+        <iframe src="${googleViewer}" allowfullscreen></iframe>
     `);
 </script>
 
