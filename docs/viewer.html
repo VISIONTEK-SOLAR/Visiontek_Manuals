@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>PDF Viewer</title>
-<style>
+  <meta charset="UTF-8">
+  <title>VISIONTEK – Manual Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
     body {
-        margin: 0;
-        background: #000;
+      margin: 0;
+      background: #000;
     }
     iframe {
-        width: 100vw;
-        height: 100vh;
-        border: none;
+      width: 100%;
+      height: 100vh;
+      border: none;
+      background: #000;
     }
-</style>
+  </style>
 </head>
+
 <body>
 
 <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const file = urlParams.get("file");
+  const params = new URLSearchParams(window.location.search);
+  const file = params.get("file");
 
-    const pdfURL = "https://cdn.jsdelivr.net/gh/VISIONTEK-SOLAR/Visiontek_Manuals@main/" + file;
+  if (!file) {
+    document.body.innerHTML =
+      "<p style='color:white;text-align:center;'>No file specified</p>";
+  } else {
+    const cdnUrl =
+      "https://cdn.jsdelivr.net/gh/VISIONTEK-SOLAR/Visiontek_Manuals@main/" + file;
 
-    const googleViewer = "https://docs.google.com/viewer?url=" + encodeURIComponent(pdfURL) + "&embedded=true";
-
-    document.write(`
-        <iframe src="${googleViewer}" allowfullscreen></iframe>
-    `);
+    const iframe = document.createElement("iframe");
+    iframe.src = cdnUrl;
+    document.body.appendChild(iframe);
+  }
 </script>
 
 </body>
