@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>VISIONTEK – Manual Viewer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
     body {
@@ -29,11 +29,23 @@
     document.body.innerHTML =
       "<p style='color:white;text-align:center;'>No file specified</p>";
   } else {
+    // Primary source (fast, no redirect)
     const cdnUrl =
       "https://cdn.jsdelivr.net/gh/VISIONTEK-SOLAR/Visiontek_Manuals@main/" + file;
 
+    // Fallback source (Google Docs Viewer)
+    const googleViewer =
+      "https://docs.google.com/viewer?embedded=true&url=" +
+      encodeURIComponent(cdnUrl);
+
     const iframe = document.createElement("iframe");
     iframe.src = cdnUrl;
+
+    // If native PDF preview fails, switch to Google Viewer
+    iframe.onerror = function () {
+      iframe.src = googleViewer;
+    };
+
     document.body.appendChild(iframe);
   }
 </script>
