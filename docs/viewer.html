@@ -1,59 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>VISIONTEK – Manual Viewer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
+<title>PDF Viewer</title>
+<style>
     body {
-      margin: 0;
-      background: #000;
+        margin: 0;
+        background: #000;
     }
     iframe {
-      width: 100%;
-      height: 100vh;
-      border: none;
-      background: #000;
+        width: 100vw;
+        height: 100vh;
+        border: none;
     }
-    .message {
-      color: white;
-      text-align: center;
-      margin-top: 40px;
-      font-family: Arial, sans-serif;
-    }
-  </style>
+</style>
 </head>
-
 <body>
 
-<iframe id="pdfFrame"></iframe>
-
 <script>
-  const params = new URLSearchParams(window.location.search);
-  const file = params.get("file");
+    const urlParams = new URLSearchParams(window.location.search);
+    const file = urlParams.get("file");
 
-  if (!file) {
-    document.body.innerHTML =
-      "<div class='message'>No manual selected</div>";
-  } else {
-    const cdnUrl =
-      "https://cdn.jsdelivr.net/gh/VISIONTEK-SOLAR/Visiontek_Manuals@main/" + file;
+    const pdfURL = "https://cdn.jsdelivr.net/gh/VISIONTEK-SOLAR/Visiontek_Manuals@main/" + file;
 
-    const googleViewer =
-      "https://docs.google.com/viewer?embedded=true&url=" +
-      encodeURIComponent(cdnUrl);
+    const googleViewer = "https://docs.google.com/viewer?url=" + encodeURIComponent(pdfURL) + "&embedded=true";
 
-    const iframe = document.getElementById("pdfFrame");
-
-    // Try direct PDF first
-    iframe.src = cdnUrl;
-
-    // Fallback to Google Viewer if loading fails
-    iframe.onerror = function () {
-      iframe.src = googleViewer;
-    };
-  }
+    document.write(`
+        <iframe src="${googleViewer}" allowfullscreen></iframe>
+    `);
 </script>
 
 </body>
