@@ -1,148 +1,185 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VISIONTEK – User Manuals</title>
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
+```
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+    }
+
+    .header {
+        background: #ffffff;
+        padding: 15px 40px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    }
+
+    .header img {
+        height: 60px;
+    }
+
+    .title-text {
+        color: #ff6600;
+        font-size: 28px;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+
+    .container {
+        padding: 40px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .category-title {
+        font-size: 28px;
+        margin-top: 45px;
+        color: #ff6600;
+        border-left: 6px solid #ff6600;
+        padding-left: 12px;
+        font-weight: bold;
+    }
+
+    .subcategory-title {
+        font-size: 20px;
+        margin-top: 25px;
+        color: #444;
+        font-weight: bold;
+    }
+
+    .manual-card {
+        background: white;
+        padding: 22px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .manual-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .view-btn {
+        background: #ff6600;
+        color: white;
+        padding: 10px 22px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .view-btn:hover {
+        background: #e25500;
+    }
+
+    @media(max-width:768px){
+        .manual-card{
+            flex-direction:column;
+            gap:15px;
+            text-align:center;
         }
 
-        .header {
-            background: #ffffff;
-            padding: 15px 40px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+        .container{
+            padding:20px;
         }
+    }
+</style>
+```
 
-        .header img {
-            height: 60px;
-        }
-
-        .title-text {
-            color: #ff6600;
-            font-size: 28px;
-            font-weight: bold;
-            margin-left: 20px;
-        }
-
-        .container {
-            padding: 40px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .category-title {
-            font-size: 26px;
-            margin-top: 40px;
-            color: #ff6600;
-            border-left: 6px solid #ff6600;
-            padding-left: 12px;
-        }
-
-        .manual-card {
-            background: white;
-            padding: 22px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-            margin: 20px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .manual-name {
-            font-size: 20px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .view-btn {
-            background: #ff6600;
-            color: white;
-            padding: 10px 22px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .view-btn:hover {
-            background: #e25500;
-        }
-    </style>
 </head>
 
 <body>
 
-    <div class="header">
-        <img src="visiontek-logo.png" alt="VISIONTEK Logo">
-        <div class="title-text">User Manuals</div>
-    </div>
+<div class="header">
+    <img src="visiontek-logo.png" alt="VISIONTEK Logo">
+    <div class="title-text">User Manuals</div>
+</div>
 
-    <div class="container">
+<div class="container">
 
-        <!-- 1. On-grid Inverters -->
-        <div class="category-title">On-grid Inverters</div>
+```
+<div class="category-title">Inverters</div>
 
-        <div class="manual-card">
-            <div class="manual-name">Single Phase Inverter – User Manual</div>
-            <a class="view-btn"
-               href="viewer.html?file=manuals/ongrid/1Ph-Inverter-Usermanual.pdf"
-               target="_blank">
-               View Manual
-            </a>
-        </div>
+<div class="subcategory-title">On-Grid Inverters</div>
 
-        <div class="manual-card">
-            <div class="manual-name">Three Phase Inverter – User Manual</div>
-            <a class="view-btn"
-               href="viewer.html?file=manuals/ongrid/3Ph-Inverter-Usermanual-v2.pdf"
-               target="_blank">
-               View Manual
-            </a>
-        </div>
+<div class="manual-card">
+    <div class="manual-name">Single Phase Inverter User Manual</div>
+    <a class="view-btn" href="viewer.html?file=manuals/ongrid/1Ph-Inverter-Usermanual.pdf" target="_blank">View Manual</a>
+</div>
 
-        <!-- 2. Dongles -->
-        <div class="category-title">Dongles</div>
+<div class="manual-card">
+    <div class="manual-name">Three Phase Inverter User Manual</div>
+    <a class="view-btn" href="viewer.html?file=manuals/ongrid/3Ph-Inverter-Usermanual-v2.pdf" target="_blank">View Manual</a>
+</div>
 
-        <div class="manual-card">
-            <div class="manual-name">Wi-Fi Dongle – User Manual</div>
-            <a class="view-btn"
-               href="viewer.html?file=manuals/Dongles/wi-fi dongle usermanual.pdf"
-               target="_blank">
-               View Manual
-            </a>
-        </div>
+<div class="subcategory-title">Hybrid Inverters</div>
 
-        <div class="manual-card">
-            <div class="manual-name">GSM Dongle – User Manual</div>
-            <a class="view-btn"
-               href="viewer.html?file=manuals/Dongles/GSM dongle usermanual.pdf"
-               target="_blank">
-               View Manual
-            </a>
-        </div>
+<div class="manual-card">
+    <div class="manual-name">Hybrid Inverter User Manual</div>
+    <a class="view-btn" href="viewer.html?file=manuals/hybrid/Hybrid inverter usermanual.pdf" target="_blank">View Manual</a>
+</div>
 
-        <!-- 3. Batteries -->
-        <div class="category-title">Batteries</div>
+<div class="subcategory-title">Off-Grid Inverters</div>
 
-        <div class="manual-card">
-            <div class="manual-name">Battery Manual – 12V 100Ah</div>
-            <a class="view-btn"
-               href="viewer.html?file=manuals/batteries/battery manual - 20251114.pdf"
-               target="_blank">
-               View Manual
-            </a>
-        </div>
+<div class="manual-card">
+    <div class="manual-name">All In One Home Inverter User Manual</div>
+    <a class="view-btn" href="viewer.html?file=manuals/Offgrid Inverter/All in one Home inverter usermanual.pdf" target="_blank">View Manual</a>
+</div>
 
-    </div>
+<div class="category-title">Dongles</div>
+
+<div class="manual-card">
+    <div class="manual-name">Wi-Fi Dongle User Manual</div>
+    <a class="view-btn" href="viewer.html?file=manuals/Dongles/wi-fi dongle usermanual.pdf" target="_blank">View Manual</a>
+</div>
+
+<div class="manual-card">
+    <div class="manual-name">GSM Dongle User Manual</div>
+    <a class="view-btn" href="viewer.html?file=manuals/Dongles/GSM usermanual.pdf" target="_blank">View Manual</a>
+</div>
+
+<div class="category-title">Batteries</div>
+
+<div class="subcategory-title">General Battery Manual</div>
+
+<div class="manual-card">
+    <div class="manual-name">General Battery User Manual</div>
+    <a class="view-btn" href="viewer.html?file=manuals/batteries/General battery usermanual.pdf" target="_blank">View Manual</a>
+</div>
+
+<div class="subcategory-title">Batteries With Communication</div>
+
+<p><b>Manuals will be added soon.</b></p>
+
+<div class="subcategory-title">Batteries Without Communication</div>
+
+<div class="manual-card">
+    <div class="manual-name">12V & 24V Battery User Manual</div>
+    <a class="view-btn" href="viewer.html?file=manuals/batteries/without-communication/12V&24V usermanual_Without Communication.pdf" target="_blank">View Manual</a>
+</div>
+
+<div class="manual-card">
+    <div class="manual-name">51V100Ah Battery User Manual</div>
+    <a class="view-btn" href="viewer.html?file=manuals/batteries/without-communication/51V100Ah Battery usermanual_Without Communication.pdf" target="_blank">View Manual</a>
+</div>
+```
+
+</div>
 
 </body>
 </html>
